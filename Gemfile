@@ -1,4 +1,6 @@
+ruby '2.2.1'
 source 'https://rubygems.org'
+
 gem 'rails', '4.2.4'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,6 +16,7 @@ gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'puma'
 
 
 group :development, :test do

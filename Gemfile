@@ -15,9 +15,17 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'simple_form'
 
+
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'factory_girl'
+end
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'

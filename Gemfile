@@ -17,6 +17,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'puma'
+gem 'paperclip', '~> 4.3'
 
 
 group :development, :test do

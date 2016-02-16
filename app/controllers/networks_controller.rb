@@ -51,7 +51,7 @@ class NetworksController < ApplicationController
     end
 
     def set_network
-      @network = Network.find(params['id'])
+      @network = Network.friendly.find(params['id'])
     end
 
 end

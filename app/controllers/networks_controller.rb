@@ -1,5 +1,9 @@
 class NetworksController < ApplicationController
-  before_action :set_network, only:[:show]
+  before_action :set_network, only:[:show, :edit, :update, :destroy]
+
+  def index
+    @networks = Network.all
+  end
 
   def show
 
@@ -19,6 +23,26 @@ class NetworksController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+  end
+
+  def update
+    if @network.update(network_params)
+      flash[:notice] = "Network has been updated."
+      redirect_to @network
+    else
+      flash.now[:alert] = "Network has not been updated."
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @network.destroy
+    flash[:notice] = "Network has been successfully deleted."
+    redirect_to networks_path
+  end
+
 
   private
 

@@ -1,5 +1,13 @@
+<% title(@network.name) %>
 <h1><%= @network.name %></h1>
 <%= image_tag(@network.logo.url(:medium)) %>
 <div class="">
   <%= @network.bio %>
+</div>
+
+<div class="admin-actions">
+  <%= link_to "Edit Network", edit_network_path(@network), class:"edit" %>
+  <%= link_to "Delete Network", network_path(@network), method: :delete,
+                                                        class:"delete",
+    data:{confirm:"Are you sure that you want to delete this network?"} %>
 </div>

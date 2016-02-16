@@ -1,0 +1,8 @@
+<% title("All TV Networks") %>
+<section class="networks">
+  <% @networks.each do |network| %>
+    <div class="network">
+      <%= link_to network.name, network %>
+    </div>
+  <% end %>
+</section>

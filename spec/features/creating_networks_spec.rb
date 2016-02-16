@@ -15,6 +15,11 @@ RSpec.feature "User can create network" do
     attach_file('network[logo]', Rails.root + 'spec/fixtures/test.png')
     click_button "Create Network"
 
+    network = Network.find_by(name: "HBO")
+    expect(page.current_url).to eq network_url(network)
+    title = "HBO - VoidTV"
+    expect(page).to have_title title
+
     # Then #
     expect(page).to have_content "Network has been created."
   end

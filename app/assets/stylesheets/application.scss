@@ -1,14 +1,18 @@
 /*
- *= require_tree .
  *= require_self
 */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "colors";
+@import "networks";
 
 
-
+/* Main navigation menu */
+.navbar {
+  margin-bottom:0;
+}
 /* Alerts */
 .alert-notice {
   @extend .alert-success;
@@ -44,5 +48,15 @@ a.delete {
   @extend .btn-danger;
   &:before {
     @extend .fa-trash;
+  }
+}
+
+/* Pagination */
+.pagination-wrapper {
+  .active span {
+    background: $gray;
+    color: #fff;
+    font-weight: bold;
+    border:1px solid $gray;
   }
 }

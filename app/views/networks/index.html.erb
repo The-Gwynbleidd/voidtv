@@ -1,8 +1,41 @@
 <% title("All TV Networks") %>
-<section class="networks">
-  <% @networks.each do |network| %>
-    <div class="network">
-      <%= link_to network.name, network %>
-    </div>
-  <% end %>
-</section>
+<div class="row">
+  <div class="col-lg-12">
+    <section class="networks">
+      <header>
+        <h1>All TV Networks (<%= @networks.count %>)</h1>
+      </header>
+      <div class="table-wrapper">
+        <table class="table table-bordered">
+          <tr>
+            <th>
+              Logo
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Overview
+            </th>
+          </tr>
+          <% @networks.each do |network| %>
+          <tr>
+            <td>
+              <%= image_tag(network.logo.url(:small), class:"img img-responsive") %>
+            </td>
+            <td>
+              <%= link_to network.name, network %>
+            </td>
+            <td>
+              <%= network.bio %>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+      <div class="pagination-wrapper">
+        <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+      </div>
+    </section>
+  </div>
+</div>

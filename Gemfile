@@ -18,6 +18,7 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'puma'
 gem 'paperclip', '~> 4.3'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do

@@ -2,7 +2,7 @@ class NetworksController < ApplicationController
   before_action :set_network, only:[:show, :edit, :update, :destroy]
 
   def index
-    @networks = Network.all
+    @networks = Network.paginate(:page => params[:page], :per_page => 30).order("name ASC")
   end
 
   def show

@@ -9,3 +9,51 @@
     min-height:135px;
   }
 }
+
+#tv-network {
+  box-sizing:border-box;
+  .name-actions {
+    padding:10px;
+    position:relative;
+    background: #606c88; /* Old browsers */
+    background: -moz-linear-gradient(top,  #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
+    h1 {
+      margin:0;
+      padding:0;
+      color:$base-white;
+      font-family: 'Nunito', sans-serif;
+    }
+  }
+
+  .bio {
+    margin-top:10px;
+
+    h2 {
+      margin:0;
+      padding:0;
+      margin-bottom:10px;
+      border-bottom: 2px solid #333;
+      padding-bottom:3px;
+    }
+  }
+
+  .sidebar {
+    margin-top:10px;
+  }
+}
+
+ul.admin-actions {
+  width:50%;
+  margin:0;
+  padding:0;
+  text-align:right;
+  @extend .list-unstyled;
+  @extend .list-inline;
+
+  li {
+    padding:0;
+  }
+}

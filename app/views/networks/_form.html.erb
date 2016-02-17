@@ -1,6 +1,14 @@
 <%= simple_form_for(network) do |f| %>
   <%= f.input :name %>
   <%= f.input :bio %>
+  <%= f.input :overview %>
   <%= f.input :logo, as: :file %>
   <%= f.button :submit, class:"btn btn-primary" %>
 <% end %>
+
+<!-- Initialize the editor. -->
+<script>
+  $(function() {
+    $('#network_bio').froalaEditor()
+  });
+</script>

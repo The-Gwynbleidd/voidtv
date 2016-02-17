@@ -47,7 +47,7 @@ class NetworksController < ApplicationController
   private
 
     def network_params
-      params.require(:network).permit(:name, :bio, :logo)
+      params.require(:network).permit(:name, :bio, :overview, :logo)
     end
 
     def set_network

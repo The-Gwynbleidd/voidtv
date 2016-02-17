@@ -20,6 +20,7 @@ gem 'puma'
 gem 'paperclip', '~> 4.3'
 gem 'will_paginate-bootstrap'
 gem 'friendly_id', '~> 5.1.0'
+gem 'wysiwyg-rails'
 
 
 group :development, :test do

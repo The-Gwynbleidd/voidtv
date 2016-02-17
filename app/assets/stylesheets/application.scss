@@ -1,4 +1,6 @@
 /*
+ *= require froala_editor.min.css
+ *= require froala_style.min.css
  *= require_self
 */
 
@@ -7,11 +9,16 @@
 @import "font-awesome";
 @import "colors";
 @import "networks";
+@import "responsive";
 
+/* Body */
+body {
+
+}
 
 /* Main navigation menu */
 .navbar {
-  margin-bottom:0;
+  margin-bottom:5px;
 }
 /* Alerts */
 .alert-notice {

@@ -1,0 +1,15 @@
+<%= simple_form_for(actor) do |f| %>
+  <%= f.input :fullname %>
+  <%= f.input :bio %>
+  <%= f.input :overview %>
+  <%= f.input :date_of_birth %>
+  <%= f.input :image, as: :file %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<!-- Initialize the editor. -->
+<script>
+  $(function() {
+    $('#actor_bio').froalaEditor()
+  });
+</script>

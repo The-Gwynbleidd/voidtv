@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # Networks #
   resources :networks
 
+  # Actors #
+  resources :actors
+
   # Root page #
   root "pages#index"
 end

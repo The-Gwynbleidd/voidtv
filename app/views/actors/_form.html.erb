@@ -2,7 +2,9 @@
   <%= f.input :fullname %>
   <%= f.input :bio %>
   <%= f.input :overview %>
-  <%= f.input :date_of_birth %>
+  <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 150,
+                              end_year: Date.today.year,
+                              order: [:day, :month, :year] %>
   <%= f.input :image, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

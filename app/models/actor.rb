@@ -10,5 +10,9 @@ class Actor < ActiveRecord::Base
 
   # Friendly Links #
   extend FriendlyId
-  friendly_id :fullname, use: :slugged 
+  friendly_id :fullname, use: :slugged
+
+  def should_generate_new_friendly_id?
+    fullname_changed?
+  end
 end

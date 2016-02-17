@@ -26,6 +26,9 @@
             <li>
               <%= link_to fa_icon("building") + " TV Networks", networks_path %>
             </li>
+            <li>
+              <%= link_to fa_icon("reorder") + " Ganres", ganres_path %>
+            </li>
           </ul>
         </li>
       </ul>
@@ -36,9 +39,11 @@
             <li>
               <%= link_to "Add New Network", new_network_path %>
             </li>
-            <li role="separator" class="divider"></li>
             <li>
               <%= link_to "Add New Actor", new_actor_path %>
+            </li>
+            <li>
+              <%= link_to "Add New Ganre", new_ganre_path %>
             </li>
           </ul>
         </li>

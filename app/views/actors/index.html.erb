@@ -11,8 +11,7 @@
 </div>
 
 <script>
-  $(function() {
-    var equalImagesHeight = function(){
+  var equalImagesHeight = function(){
       var columns = $('.actor-image'),
       height = 0;
       //Reset the height of all the columns so that we can recalculate max height
@@ -33,33 +32,32 @@
       }
     }
 
-    var equalColumns = function(){
-      var columns = $('.actor-preview-inside'),
-      height = 0;
-      //Reset the height of all the columns so that we can recalculate max height
-      for (var i = 0; i < columns.length; i++) {
-        columns[i].style.height = "auto";
-      }
+  var equalColumns = function(){
+    var columns = $('.actor-preview-inside'),
+    height = 0;
+    //Reset the height of all the columns so that we can recalculate max height
+    for (var i = 0; i < columns.length; i++) {
+      columns[i].style.height = "auto";
+    }
 
-      //Loop through columns and find max height
-      for (var i = 0; i < columns.length; i++) {
-        if(height < columns[i].clientHeight){
-          height = columns[i].clientHeight;
-        }
-      }
-
-      //Apply the max height to all columns
-      for (var i = 0; i < columns.length; i++) {
-        columns[i].style.height = height + "px";
+    //Loop through columns and find max height
+    for (var i = 0; i < columns.length; i++) {
+      if(height < columns[i].clientHeight){
+        height = columns[i].clientHeight;
       }
     }
 
-    //Initially set the column heights
-    equalImagesHeight();
-    equalColumns();
+    //Apply the max height to all columns
+    for (var i = 0; i < columns.length; i++) {
+      columns[i].style.height = height + "px";
+    }
+  }
 
-    //Update column heights on browser resize
-    window.addEventListener("resize", equalImagesHeight, true);
-    window.addEventListener("resize", equalColumns, true);
-  })
+  //Initially set the column heights
+  equalImagesHeight();
+  equalColumns();
+
+  //Update column heights on browser resize
+  window.addEventListener("resize", equalImagesHeight, true);
+  window.addEventListener("resize", equalColumns, true);
 </script>

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # Actors #
   resources :actors
 
+  # Ganres #
+  resources :ganres 
+
   # Root page #
   root "pages#index"
 end

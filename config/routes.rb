@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   # Resources #
   resources :tags
 
+  # Countries #
+  resources :countries 
+
   # Root page #
   root "pages#index"
 end

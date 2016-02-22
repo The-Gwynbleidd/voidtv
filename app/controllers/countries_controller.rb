@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
       flash[:notice] = "Country has been updated."
       redirect_to @country
     else
-      flash.now[:alert] = "COuntry has not been updated."
+      flash.now[:alert] = "Country has not been updated."
       render "edit"
     end
   end

@@ -10,6 +10,7 @@ RSpec.feature "Users can create actors" do
     fill_in "Fullname", with: "Emma Watson"
     fill_in "Bio", with: "Simple bio for Emma Watson"
     fill_in "Overview", with: "Simple overview"
+    choose('Female')
     attach_file("actor[image]", Rails.root + 'spec/fixtures/emma.jpg')
     click_button "Create Actor"
 

@@ -26,3 +26,55 @@
     </div>
   </div>
 </section>
+
+<script>
+  var equalImagesHeight = function(){
+      var columns = $('.actor-image'),
+      height = 0;
+      //Reset the height of all the columns so that we can recalculate max height
+      for (var i = 0; i < columns.length; i++) {
+        columns[i].style.height = "auto";
+      }
+
+      //Loop through columns and find max height
+      for (var i = 0; i < columns.length; i++) {
+        if(height < columns[i].clientHeight){
+          height = columns[i].clientHeight;
+        }
+      }
+
+      //Apply the max height to all columns
+      for (var i = 0; i < columns.length; i++) {
+        columns[i].style.height = height + "px";
+      }
+    }
+
+  var equalColumns = function(){
+    var columns = $('.actor-preview-inside'),
+    height = 0;
+    //Reset the height of all the columns so that we can recalculate max height
+    for (var i = 0; i < columns.length; i++) {
+      columns[i].style.height = "auto";
+    }
+
+    //Loop through columns and find max height
+    for (var i = 0; i < columns.length; i++) {
+      if(height < columns[i].clientHeight){
+        height = columns[i].clientHeight;
+      }
+    }
+
+    //Apply the max height to all columns
+    for (var i = 0; i < columns.length; i++) {
+      columns[i].style.height = height + "px";
+    }
+  }
+
+  //Initially set the column heights
+  equalImagesHeight();
+  equalColumns();
+
+  //Update column heights on browser resize
+  window.addEventListener("resize", equalImagesHeight, true);
+  window.addEventListener("resize", equalColumns, true);
+</script>

@@ -50,5 +50,8 @@ class CountriesController < ApplicationController
 
     def set_country
       @country = Country.friendly.find(params['id'])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The country you were looking for could not be found."
+      redirect_to countries_path
     end
 end

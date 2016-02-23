@@ -2,6 +2,7 @@
   <%= f.input :name %>
   <%= f.input :bio %>
   <%= f.input :overview %>
+  <%= f.association :country %>
   <%= f.input :logo, as: :file %>
   <%= f.button :submit, class:"btn btn-primary" %>
 <% end %>

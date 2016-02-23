@@ -15,4 +15,8 @@ class Country < ActiveRecord::Base
     name_changed?
   end
 
+  # Associations #
+  has_many :actors
+  has_many :networks
+
 end

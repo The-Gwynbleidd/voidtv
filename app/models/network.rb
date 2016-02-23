@@ -16,5 +16,8 @@ class Network < ActiveRecord::Base
     name_changed?
   end
 
+  # Associations #
+  belongs_to :country
+
 
 end

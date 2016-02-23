@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222104927) do
+ActiveRecord::Schema.define(version: 20160223085135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,11 @@ ActiveRecord::Schema.define(version: 20160222104927) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "slug"
+    t.integer  "country_id"
+    t.string   "gender"
   end
+
+  add_index "actors", ["country_id"], name: "index_actors_on_country_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
@@ -73,7 +77,10 @@ ActiveRecord::Schema.define(version: 20160222104927) do
     t.datetime "logo_updated_at"
     t.string   "slug"
     t.text     "overview"
+    t.integer  "country_id"
   end
+
+  add_index "networks", ["country_id"], name: "index_networks_on_country_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
@@ -83,4 +90,6 @@ ActiveRecord::Schema.define(version: 20160222104927) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "actors", "countries"
+  add_foreign_key "networks", "countries"
 end

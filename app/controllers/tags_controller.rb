@@ -50,5 +50,8 @@ class TagsController < ApplicationController
 
     def set_tag
       @tag = Tag.friendly.find(params['id'])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The tag you were looking for could not be found."
+      redirect_to tags_path
     end
 end

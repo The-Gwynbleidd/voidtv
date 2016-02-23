@@ -5,6 +5,8 @@
   <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 150,
                               end_year: Date.today.year,
                               order: [:day, :month, :year] %>
+  <%= f.association :country %>
+  <%= f.collection_radio_buttons :gender, [['Male'] ,['Female']], :first, :last%>
   <%= f.input :image, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

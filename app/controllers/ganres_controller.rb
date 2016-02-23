@@ -50,5 +50,8 @@ class GanresController < ApplicationController
 
     def set_ganre
       @ganre = Ganre.friendly.find(params['id'])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The genre you were looking for could not be found."
+      redirect_to ganres_path
     end
 end

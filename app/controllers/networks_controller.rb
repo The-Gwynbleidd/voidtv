@@ -47,11 +47,14 @@ class NetworksController < ApplicationController
   private
 
     def network_params
-      params.require(:network).permit(:name, :bio, :overview, :logo)
+      params.require(:network).permit(:name, :bio, :overview, :logo, :country_id)
     end
 
     def set_network
       @network = Network.friendly.find(params['id'])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The network you were looking for could not be found."
+      redirect_to networks_path
     end
 
 end

@@ -1,4 +1,5 @@
 class Actor < ActiveRecord::Base
+
   # Validations #
   validates :fullname, presence: true
   validates :bio, presence: true
@@ -15,4 +16,8 @@ class Actor < ActiveRecord::Base
   def should_generate_new_friendly_id?
     fullname_changed?
   end
+
+  # Associations #
+  belongs_to :country
+
 end

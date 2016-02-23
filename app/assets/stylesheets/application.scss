@@ -7,64 +7,52 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "colors";
-@import "networks";
-@import "actors";
-@import "responsive";
 
-/* Body */
-body {
-
-}
-
-/* Main navigation menu */
+/* Main Navigation Menu */
 .navbar {
-  margin-bottom:5px;
-}
-/* Alerts */
-.alert-notice {
-  @extend .alert-success;
-}
-.alert-alert {
-  @extend .alert-danger;
-}
+  background: #606c88; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-/* Buttons */
-.btn {
+  border: none;
   border-radius: 0;
-}
-a.new, a.edit, a.delete {
-  @extend .btn;
-  &:before {
-    font-family: "FontAwesome";
-    padding-right: 0.5em;
+
+  margin-bottom:5px;
+
+  .navbar-brand {
+    color:#fff;
+    font-weight:bold;
+    &:hover {
+      color:#fff;
+    }
   }
-}
-a.new {
-  @extend .btn-success;
-  &:before {
-    @extend .fa-plus;
-  }
-}
-a.edit {
-  @extend .btn-primary;
-  &:before {
-    @extend .fa-pencil;
-  }
-}
-a.delete {
-  @extend .btn-danger;
-  &:before {
-    @extend .fa-trash;
+
+  .navbar-nav {
+    li {
+      a {
+        color:#fff;
+        padding-left:5px;
+        padding-right:5px;
+        &:hover {
+          color:#ccc;
+        }
+      }
+    }
+
+    .dropdown-menu li a {
+      color:#000;
+    }
   }
 }
 
-/* Pagination */
-.pagination-wrapper {
-  .active span {
-    background: $gray;
-    color: #fff;
-    font-weight: bold;
-    border:1px solid $gray;
+@media (max-width: $screen-sm-min) {
+  .navbar {
+    .navbar-nav {
+      .dropdown-menu li a {
+        color:#fff !important;
+      }
+    }
   }
 }

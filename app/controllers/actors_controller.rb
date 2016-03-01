@@ -2,7 +2,7 @@ class ActorsController < ApplicationController
   before_action :set_actor, only:[:show, :edit, :update, :destroy]
 
   def index
-    @actors = Actor.all
+    @actors = Actor.all.order("fullname ASC")
   end
 
   def show

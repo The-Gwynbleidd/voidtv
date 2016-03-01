@@ -1,0 +1,15 @@
+<section id="all-actors">
+  <ul class="list">
+    <% @actors.each do |actor| %>
+      <li class="list__item">
+        <div class="list__item__inner">
+          <%= image_tag(actor.image.url(:preview), class:"img img-responsive") %>
+          <h2><%= link_to actor.fullname, actor %></h2>
+          <p>
+            <%= actor.overview[0..100] %>...
+          </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>

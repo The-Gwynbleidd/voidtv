@@ -7,7 +7,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
 /* Main Navigation Menu */
 .navbar {
   background: #606c88; /* Old browsers */
@@ -19,7 +18,7 @@
   border: none;
   border-radius: 0;
 
-  margin-bottom:5px;
+  margin-bottom:2px;
 
   .navbar-brand {
     color:#fff;
@@ -47,6 +46,12 @@
   }
 }
 
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+  padding:0;
+  margin:0;
+}
+
 @media (max-width: $screen-sm-min) {
   .navbar {
     .navbar-nav {
@@ -56,3 +61,69 @@
     }
   }
 }
+
+/* Equel heights columns */
+.list {
+  padding:0;
+  width: 100%;
+  overflow: hidden;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  width: 25%;
+  float: left;
+  padding: 0.625rem; /* 10 */
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list__item__inner {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 4px #333;
+  padding:5px;
+
+  h2 {
+    margin-top:10px;
+    margin-bottom:5px;
+    font-size:1.5em;
+  }
+}
+
+.list__item img {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+@media screen and ( max-width: 1170px ) {
+  .list__item {
+    width: 25%;
+  }
+}
+
+@media screen and ( max-width: 992px) {
+  .list__item {
+    width: 33.333%;
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .list__item {
+    width: 50%; /* 1 item per row */
+    float: none;
+  }
+}
+
+@import "actors";

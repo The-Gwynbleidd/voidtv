@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :ganre do
+  factory :genre do
     name "Example Name"
     description "Example Description"
   end

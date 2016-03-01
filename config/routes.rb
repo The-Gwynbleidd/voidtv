@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   resources :actors
 
   # Ganres #
-  resources :ganres
+  resources :genres
 
   # Resources #
   resources :tags
 
   # Countries #
-  resources :countries 
+  resources :countries
 
   # Root page #
   root "pages#index"

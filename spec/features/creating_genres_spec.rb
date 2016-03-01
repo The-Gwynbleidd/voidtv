@@ -1,25 +1,25 @@
 require "rails_helper"
 
-RSpec.feature "Users can create ganres" do
+RSpec.feature "Users can create genres" do
 
   before do
     visit "/"
-    click_link "Add New Ganre"
+    click_link "Add New Genre"
   end
 
   scenario "with valid attributes" do
     fill_in "Name", with: "Action"
     fill_in "Description", with:"Simple description"
-    click_button "Create Ganre"
+    click_button "Create Genre"
 
-    expect(page).to have_content "Ganre has been created."
+    expect(page).to have_content "Genre has been created."
 
   end
 
   scenario "with invalid attributes" do
-    click_button "Create Ganre"
+    click_button "Create Genre"
 
-    expect(page).to have_content "Ganre has not been created."
+    expect(page).to have_content "Genre has not been created."
     expect(page).to have_content "Name can't be blank"
     expect(page).to have_content "Description can't be blank"
   end

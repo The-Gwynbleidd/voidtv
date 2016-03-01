@@ -6,7 +6,14 @@ RSpec.feature "Users can view countries" do
 
     visit "/"
     click_link "Countries"
+
+    title = "Countries - VoidTV"
+    expect(page).to have_title title
+
     click_link "Australia"
+
+    title = "Australia - VoidTV"
+    expect(page).to have_title title
 
     expect(page.current_url).to eq country_url(country)
   end

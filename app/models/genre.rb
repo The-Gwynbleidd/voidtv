@@ -1,4 +1,4 @@
-class Ganre < ActiveRecord::Base
+class Genre < ActiveRecord::Base
 
   # Validations #
   validates :name, presence: true

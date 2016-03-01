@@ -1,3 +1,4 @@
+<% title(@tag.name) %>
 <%= @tag.name %>
 <%= link_to "Edit Tag", edit_tag_path(@tag), class:"edit" %>
 <%= link_to "Delete Tag", tag_path(@tag), method: :delete,

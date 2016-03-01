@@ -1,3 +1,10 @@
-#all-actors {
-
+.actor {
+  .image {
+    img {
+      box-shadow:1px 1px 10px #333;
+    }
+  }
+  .fullname {
+    font-family: 'Nunito', sans-serif;
+  }
 }

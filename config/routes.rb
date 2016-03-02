@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/index'
 
   # Networks #
-  resources :networks
+  resources :networks, only: [:index, :show]
 
   # Actors #
   resources :actors, only: [:index, :show]
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
     # Actors #
     resources :actors, only: [:new, :create, :edit, :update, :destroy]
+    resources :networks, only: [:new, :create, :edit, :update, :destroy]
+
   end
 
   # Root page #

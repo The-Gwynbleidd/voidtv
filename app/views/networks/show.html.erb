@@ -4,10 +4,10 @@
     <h1><%= @network.name %></h1>
     <ul class="admin-actions">
       <li>
-        <%= link_to "Edit Network", edit_network_path(@network), class:"edit" %>
+        <%= link_to "Edit Network", edit_admin_network_path(@network), class:"edit" %>
       </li>
       <li>
-        <%= link_to "Delete Network", network_path(@network), method: :delete,
+        <%= link_to "Delete Network", admin_network_path(@network), method: :delete,
                                                                 class:"delete",
             data:{confirm:"Are you sure that you want to delete this network?"} %>
       </li>

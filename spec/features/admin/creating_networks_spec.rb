@@ -4,7 +4,7 @@ RSpec.feature "User can create network" do
 
   before do
     login_as(FactoryGirl.create(:user, :admin))
-    visit '/'
+    visit '/admin'
     click_link "Add New Network"
   end
 

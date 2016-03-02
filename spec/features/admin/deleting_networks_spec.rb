@@ -2,6 +2,10 @@ require "rails_helper"
 
 RSpec.feature "Users can delete networks" do
 
+  before do
+    login_as(FactoryGirl.create(:user, :admin))
+  end
+
   scenario "successfully" do
 
     FactoryGirl.create(:network, name: "ABC")

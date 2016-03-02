@@ -4,6 +4,7 @@ RSpec.feature "Users can edit networks" do
 
   before do
     FactoryGirl.create(:network, name: "HBO")
+    login_as(FactoryGirl.create(:user, :admin))
 
     visit "/networks"
     click_link "HBO"

@@ -7,8 +7,24 @@
   </ul>
 </header>
 
-<ul>
+
+<table class="table table-responsive">
+  <tr>
+    <th>Id</th>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
   <% @users.each do |user| %>
-    <li><%= link_to user, [:admin, user] %></li>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= link_to user.email, [:admin, user] %></td>
+      <td>
+        <% if user.admin? %>
+          <span class="admin-label">Admin</span>
+        <% else %>
+          Member
+        <% end %>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>

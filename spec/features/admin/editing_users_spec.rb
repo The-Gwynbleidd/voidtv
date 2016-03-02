@@ -22,7 +22,6 @@ require "rails_helper"
     check "Is an admin?"
     click_button "Update User"
     expect(page).to have_content "User has been updated."
-    expect(page).to have_content "#{user.email} (Admin)"
   end
 
 end

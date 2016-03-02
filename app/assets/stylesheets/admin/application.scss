@@ -1,3 +1,31 @@
-// Place all the styles related to the admin/application controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sidebar {
+  box-sizing:border-box;
+  padding:0;
+  background-color:#293846;
+}
+.side-menu-list {
+  width:100%;
+  padding:0px;
+  list-style-type:none;
+  li {
+    a {
+      color:#ccc;
+      font-weight:bold;
+      display:block;
+      padding:10px;
+      font-family: 'Nunito', sans-serif;
+      &:hover {
+        text-decoration:none;
+        color:#fff;
+      }
+    }
+  }
+}
+
+.admin-label {
+  display: inline-block;
+  background: #293846;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+}

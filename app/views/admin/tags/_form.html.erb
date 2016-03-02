@@ -1,4 +1,4 @@
-<%= simple_form_for(tag) do |f| %>
+<%= simple_form_for([:admin, tag]) do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.button :submit, class:"btn btn-primary" %>

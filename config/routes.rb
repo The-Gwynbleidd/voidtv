@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :genres, only: [:index, :show]
 
   # Resources #
-  resources :tags
+  resources :tags, only: [:index, :show]
 
   # Countries #
   resources :countries
@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     resources :actors, only: [:new, :create, :edit, :update, :destroy]
     resources :networks, only: [:new, :create, :edit, :update, :destroy]
     resources :genres, only: [:new, :create, :edit, :update, :destroy]
+    resources :tags, only: [:new, :create, :edit, :update, :destroy]
 
   end
 

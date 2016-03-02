@@ -4,6 +4,7 @@ RSpec.feature "Users can delete tag" do
 
   scenario "" do
     FactoryGirl.create(:tag, name:"Gladiators")
+    login_as(FactoryGirl.create(:user, :admin))
 
     visit "/tags"
     click_link "Gladiators"

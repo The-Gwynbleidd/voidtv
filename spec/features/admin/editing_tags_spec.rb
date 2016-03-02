@@ -4,6 +4,7 @@ RSpec.feature "Users can edit tags" do
 
   before do
     FactoryGirl.create(:tag, name: "Ancient Rome")
+    login_as(FactoryGirl.create(:user, :admin))
     visit "/tags"
     click_link "Ancient Rome"
     click_link "Edit Tag"

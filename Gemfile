@@ -22,6 +22,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'will_paginate-bootstrap'
 gem 'friendly_id', '~> 5.1.0'
 gem 'wysiwyg-rails'
+gem 'devise'
 
 
 

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Users can create actors" do
   before do
     login_as(FactoryGirl.create(:user, :admin))
-    visit "/"
+    visit "/admin"
     click_link "Add New Actor"
   end
 

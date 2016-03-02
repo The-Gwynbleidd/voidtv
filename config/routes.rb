@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :networks
 
   # Actors #
-  resources :actors
+  resources :actors, only: [:index, :show]
 
   # Ganres #
   resources :genres
@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   # Admin Control Panel #
   namespace :admin do
     root "application#index"
+
+    # Actors #
+    resources :actors, only: [:new, :create, :edit, :update, :destroy]
   end
 
   # Root page #

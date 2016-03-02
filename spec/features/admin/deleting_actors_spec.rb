@@ -2,6 +2,10 @@ require "rails_helper"
 
 RSpec.feature "Users can delete actors" do
 
+  before do
+    login_as(FactoryGirl.create(:user, :admin))
+  end 
+
   scenario do
     FactoryGirl.create(:actor, fullname: "Emma Watson")
     visit "/actors"

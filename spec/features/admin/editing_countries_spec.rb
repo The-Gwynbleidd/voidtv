@@ -4,6 +4,7 @@ RSpec.feature "Users can edit countries" do
 
   before do
     FactoryGirl.create(:country, name: "Serbia")
+    login_as(FactoryGirl.create(:user, :admin))
 
     visit "/countries"
     click_link "Serbia"

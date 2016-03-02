@@ -4,7 +4,7 @@ RSpec.feature "Users can create countries" do
 
   before do
     login_as(FactoryGirl.create(:user, :admin))
-    visit "/"
+    visit "/admin"
     click_link "Add New Country"
   end
 

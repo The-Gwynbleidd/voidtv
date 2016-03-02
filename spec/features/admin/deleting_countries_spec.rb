@@ -4,6 +4,7 @@ RSpec.feature "Users can delete countries" do
 
   scenario "" do
     FactoryGirl.create(:country, name:"Serbia")
+    login_as(FactoryGirl.create(:user, :admin))
 
     visit "/countries"
     click_link "Serbia"

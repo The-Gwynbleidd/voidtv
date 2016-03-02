@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.feature "Users can create genres" do
 
   before do
+    login_as(FactoryGirl.create(:user, :admin))
     visit "/"
     click_link "Add New Genre"
   end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+
   # Static Pages #
   get 'pages/index'
 
@@ -17,6 +17,14 @@ Rails.application.routes.draw do
 
   # Countries #
   resources :countries
+
+  # Authentication #
+  devise_for :users
+
+  # Admin Control Panel #
+  namespace :admin do
+    root "application#index"
+  end
 
   # Root page #
   root "pages#index"

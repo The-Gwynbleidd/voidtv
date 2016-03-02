@@ -30,9 +30,15 @@ Rails.application.routes.draw do
     resources :genres, only: [:new, :create, :edit, :update, :destroy]
     resources :tags, only: [:new, :create, :edit, :update, :destroy]
     resources :countries, only: [:new, :create, :edit, :update, :destroy]
+    resources :users do
+      member do
+        patch :archive
+      end
+    end
 
   end
 
   # Root page #
   root "pages#index"
+
 end

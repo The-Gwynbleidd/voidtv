@@ -1,45 +1,11 @@
 class GenresController < ApplicationController
-  before_action :set_genre, only:[:show, :edit, :update, :destroy]
+  before_action :set_genre, only:[:show]
 
   def index
     @genres = Genre.all
   end
 
   def show
-  end
-
-  def new
-    @genre = Genre.new
-  end
-
-  def create
-    @genre = Genre.new(genre_params)
-    if @genre.save
-      flash[:notice] = "Genre has been created."
-      redirect_to @genre
-    else
-      flash.now[:alert] = "Genre has not been created."
-      render 'new'
-    end
-  end
-
-  def edit
-  end
-
-  def update
-    if @genre.update(genre_params)
-      flash[:notice] = "Genre has been updated."
-      redirect_to @genre
-    else
-      flash.now[:alert] = "Genre has not been updated."
-      render 'edit'
-    end
-  end
-
-  def destroy
-    @genre.destroy
-    flash[:notice] = "Genre has been successfully deleted."
-    redirect_to genres_path
   end
 
   private

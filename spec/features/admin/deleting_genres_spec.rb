@@ -4,6 +4,7 @@ RSpec.feature "Users can delete genres" do
 
   scenario "" do
     FactoryGirl.create(:genre, name:"Fantasy")
+    login_as(FactoryGirl.create(:user, :admin))
 
     visit "/genres"
     click_link "Fantasy"

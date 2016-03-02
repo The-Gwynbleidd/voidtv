@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :actors, only: [:index, :show]
 
   # Ganres #
-  resources :genres
+  resources :genres, only: [:index, :show]
 
   # Resources #
   resources :tags
@@ -25,9 +25,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root "application#index"
 
-    # Actors #
     resources :actors, only: [:new, :create, :edit, :update, :destroy]
     resources :networks, only: [:new, :create, :edit, :update, :destroy]
+    resources :genres, only: [:new, :create, :edit, :update, :destroy]
 
   end
 

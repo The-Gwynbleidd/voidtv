@@ -4,6 +4,7 @@ RSpec.feature "Users can edit genres" do
 
   before do
     FactoryGirl.create(:genre, name: "Adventure")
+    login_as(FactoryGirl.create(:user, :admin))
     visit "/genres"
     click_link "Adventure"
     click_link "Edit Genre"
